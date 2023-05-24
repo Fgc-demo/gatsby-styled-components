@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import GlobalStyle from "../styles/GlobalStyle";
 
@@ -33,14 +32,6 @@ const Img = styled.img`
 const IndexPage = ({ serverData }) => {
   return (
     <Fragment>
-      <Helmet>
-        <title>Gatsby Styled Components</title>
-        <meta
-          name="description"
-          content="Gatsby example site using Styled Components"
-        />
-        <meta name="referrer" content="origin" />
-      </Helmet>
       <GlobalStyle />
       <Wrapper>
         <Title>Hello World, SSR Page with Dogs</Title>
@@ -58,6 +49,19 @@ const IndexPage = ({ serverData }) => {
 };
 
 export default IndexPage;
+
+export const head = () => {
+  return (
+    <>
+      <title>Gatsby Styled Components</title>
+      <meta
+        name="description"
+        content="Gatsby example site using Styled Components"
+      />
+      <meta name="referrer" content="origin" />
+    </>
+  );
+};
 
 // The rest of the page
 export async function getServerData() {
