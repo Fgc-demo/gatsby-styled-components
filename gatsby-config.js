@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby with styled components`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     {
@@ -12,4 +15,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
-}
+};
