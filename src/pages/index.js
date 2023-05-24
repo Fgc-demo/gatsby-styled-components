@@ -50,7 +50,7 @@ const IndexPage = ({ serverData }) => {
 
 export default IndexPage;
 
-export const head = () => {
+export const Head = () => {
   return (
     <>
       <title>Gatsby Styled Components</title>
